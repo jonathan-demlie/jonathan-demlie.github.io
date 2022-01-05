@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-pink.css">
+  <title>ፖል ላቢሌ ፖግባ እና ህይወቱ</title>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <style>
+    *{
+      padding:0;
+      margin:0;
+      box-sizing:border-box;
+    }
+    body {
+      background: url("https://statathlon.com/wp-content/uploads/2018/03/paul-pogba-1-1.jpg");
+      
+
+    }
+
+    .container {
+      width: 60%;
+      height: 60%;
+      position:Absolute;
+      left:15%;
+    }
+
+    .links-container {
+      display: flex;
+      flex-direction: column;
+      jusify-content: center;
+      align-items: center;
+    }
+
+    .links-container a {
+      width: 80%;
+    }
+
+    .w3-theme-l1:hover {
+      background-color: #f279a1 !important;
+    }
+
+    .margin-top-2 {
+      margin-top: 32px;
+    }
+
+    .bottom {
+      width: 100%;
+      text-align: center;
+      width: auto;
+      font-weight: bolder;
+    }
+
+    .bottom span {
+      color: #ed4d82;
+    }
+
+    .bottom svg {
+      stroke: #ed4d82;
+      fill: #ed4d82;
+    }
+
+    @media (min-width: 768px) {
+      .link {
+        width: 100%;
+      }
+    }
+
+    @media (min-width: 576px) {
+      .container {
+        max-width: 540px;
+      }
+    }
+
+    .open-button {
+      background-color: #00e6ac;
+      color: white;
+      font-size:24px;
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      position: fixed;
+      bottom: 23px;
+      right: 28px;
+      width: 280px;
+    }
+
+    /* The popup form - hidden by default */
+    .form-popup {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      right: 15px;
+      border: 3px solid #f1f1f1;
+      z-index: 9;
+    }
+
+    /* Add styles to the form container */
+    .form-container {
+      max-width: 600px;
+      padding: 10px;
+      background-color: white;
+    }
+
+table, th, td {
+  border:1px solid purple;
+}
+
+    /* Set a style for the submit */
+    .form-container .btn {
+      background-color: #04AA6D;
+      color: white;
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom: 10px;
+      opacity: 0.8;
+    }
+
+    /* Add a red background color to the cancel button */
+    .form-container .cancel {
+      background-color: red;
+    }
+
+    /* Add some hover effects to buttons */
+    .form-container .btn:hover,
+    .open-button:hover {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Content container -->
+  <div class="container">
+
+    <!-- Links section 1. Replace the # inside of the "" with your links. -->
+    <h1 class="margin-top-2" style="text-align: center; font-weight: 900;color: purple;">ፖል ላቢሌ ፖግባ እና ህይወቱ</h1>
+        <h2 style="color:purple;">Documentary Video</h2>
+     <iframe width="960" height="540" src="https://www.youtube.com/embed/gCSyesEw79s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     <hr>
+    
+    <p style="font-size: 32;color: purple;">Unedited audio
+      <audio controls>
+        <source src="src/Unedited.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </P>
+    <hr>
+ 
+    <p style="font-size: 32;color: purple;">Edited audio
+      <audio controls>
+        <source src="src/edited.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </p>
+    <hr>
+  
+    <div class="links-container">
+      <a href="src/Script.pdf" class="w3-button w3-round-xlarge w3-theme-l1 w3-border link" target="_blank">Script
+        file</a>
+    </div>
+  
+    <hr>
+    <button class="open-button" onclick="openForm()">Click ME To See team members</button>
+    <div class="form-popup" id="myForm">
+      <form class="form-container">
+        <h1>Group Members</h1>
+        <table>
+          <tr>
+            <td>
+              <h3>Name</h3>
+            </td>
+            <td>
+              <h3>ID</h3>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <b>Yonatan Demlie<b>
+            </td>
+            <td>
+              <b>A/ur13944/10<b>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <b>Getachew Tewabe<b>
+            </td>
+            <td>
+              <b>A/ur14063/10<b>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <b> Eyasu Wendwesen <b>
+            </td>
+            <td>
+              <b>A/ur4516/09<b>
+            </td>
+          </tr>
+
+      
+        </table>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+      </form>
+    </div>
+
+    <script>
+      function openForm() {
+        document.getElementById("myForm").style.display = "block";
+      }
+
+      function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+      }
+    </script>
+
+  </div>
+  <script>
+    feather.replace()
+  </script>
+</body>
+
+</html>
